@@ -199,6 +199,12 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={2} fit caps lineHeight={1} textColor="secondary">
+              ¿Cómo diablos pongo esto en producción?
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
             <Heading size={2} fit textColor="secondary" textFont="tertiary">
               $ docker push
             </Heading>
@@ -221,12 +227,6 @@ export default class Presentation extends React.Component {
               { loc: [11, 13] }
             ]}
           />
-
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={2} fit caps lineHeight={1} textColor="secondary">
-              ¿Cómo diablos pongo esto en producción?
-            </Heading>
-          </Slide>
 
           <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
             <div>
