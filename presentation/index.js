@@ -199,6 +199,12 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={2} fit textColor="secondary" textFont="tertiary">
+              $ docker-compose run node-docker npm run test
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
             <Heading size={2} fit caps lineHeight={1} textColor="secondary">
               ¿Cómo diablos pongo esto en producción?
             </Heading>
