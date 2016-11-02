@@ -2,10 +2,10 @@
 /*eslint-disable object-shorthand*/
 
 const defaultColors = {
-  primary: "#f9c300",
-  secondary: "black",
-  tertiary: "white",
-  quartenary: "white"
+  primary: "#263238",
+  secondary: "#b3ccd5",
+  tertiary: "#249add",
+  quartenary: "#24a3d4"
 };
 
 const defaultFonts = {
@@ -210,7 +210,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           margin: 0
         },
         h3: {
-          color: "black",
+          color: "secondary",
           fontSize: "4.9rem",
           fontFamily: fonts.secondary,
           lineHeight: 1,
@@ -218,7 +218,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           margin: "0.5rem auto"
         },
         h4: {
-          color: "black",
+          color: "secondary",
           fontSize: "3.82rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -226,7 +226,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           margin: "0.5rem auto"
         },
         h5: {
-          color: "black",
+          color: "secondary",
           fontSize: "3.19rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -234,7 +234,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           margin: "0.5rem auto"
         },
         h6: {
-          color: "black",
+          color: "secondary",
           fontSize: "2.66rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -271,7 +271,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         width: "100%"
       },
       text: {
-        color: "black",
+        color: "secondary",
         fontSize: "2.66rem",
         fontFamily: fonts.primary,
         margin: "0.25rem auto"
