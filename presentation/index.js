@@ -4,7 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
-  CodePane,
   Deck,
   Heading,
   Image,
@@ -15,6 +14,8 @@ import {
   Spectacle,
   Text
 } from "spectacle";
+
+import CodeSlide from "spectacle-code-slide";
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -145,6 +146,22 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
+          <CodeSlide
+            transition={[]}
+            lang="markup"
+            code={require("raw!../assets/Dockerfile")}
+            ranges={[
+              { loc: [0, 26] },
+              { loc: [0, 1] },
+              { loc: [2, 3] },
+              { loc: [4, 6] },
+              { loc: [7, 8] },
+              { loc: [9, 14] },
+              { loc: [15, 19] },
+              { loc: [20, 26] }
+            ]}
+          />
+
           <Slide transition={["slide"]} bgColor="primary">
             <div>
               <Heading size={2} fit textColor="secondary" textFont="tertiary">
@@ -161,6 +178,19 @@ export default class Presentation extends React.Component {
               docker-compose.yml
             </Heading>
           </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="markup"
+            code={require("raw!../assets/docker-compose.yml")}
+            ranges={[
+              { loc: [0, 22] },
+              { loc: [0, 1] },
+              { loc: [2, 3] },
+              { loc: [4, 17] },
+              { loc: [18, 22] }
+            ]}
+          />
 
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={2} fit textColor="secondary" textFont="tertiary">
@@ -179,6 +209,18 @@ export default class Presentation extends React.Component {
               CI/CD con Jenkins
             </Heading>
           </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="markup"
+            code={require("raw!../assets/deploy.sh")}
+            ranges={[
+              { loc: [0, 13] },
+              { loc: [0, 1] },
+              { loc: [2, 10] },
+              { loc: [11, 13] }
+            ]}
+          />
 
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={2} fit caps lineHeight={1} textColor="secondary">
