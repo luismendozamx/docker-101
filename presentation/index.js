@@ -73,6 +73,15 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
+          <Slide transition={["slide"]} bgColor="secondary" notes="You can even put notes on your slide. How awesome is that?">
+            <Link href="http://mendoza.io/node-docker-talk">
+              <Text textSize="1.5em" textColor="primary" margin="50px 0px 0px" bold>Slides: mendoza.io/node-docker-talk</Text>
+            </Link>
+            <Link href="https://github.com/luismendozamx/node-docker-demo">
+              <Text textSize="1.5em" textColor="primary" margin="50px 0px 0px" bold>Código: github.com/luismendozamx/node-docker-demo</Text>
+            </Link>
+          </Slide>
+
           <Slide transition={["slide"]} bgColor="white">
             <Appear fid="1">
               <Image src={images.logoGbm.replace("/", "")} margin="0 auto 40px auto" display="block" height="200px"/>
