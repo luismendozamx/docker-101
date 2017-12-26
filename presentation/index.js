@@ -99,6 +99,14 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
+          <Slide transition={["slide"]} bgColor="primary">
+            <div>
+              <Heading size={2} fit textColor="secondary" textFont="tertiary">
+                $ docker pull
+              </Heading>
+            </div>
+          </Slide>
+
           <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
             <div>
               <Text bold caps margin="20px 0 0 0" textColor="primary">App de Node.js</Text>
@@ -139,14 +147,6 @@ export default class Presentation extends React.Component {
               { loc: [21, 22] }
             ]}
           />
-
-          <Slide transition={["slide"]} bgColor="primary">
-            <div>
-              <Heading size={2} fit textColor="secondary" textFont="tertiary">
-                $ docker pull
-              </Heading>
-            </div>
-          </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
             <div>
