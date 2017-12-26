@@ -143,8 +143,21 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="primary">
             <div>
               <Heading size={2} fit textColor="secondary" textFont="tertiary">
+                $ docker pull
+              </Heading>
+            </div>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <div>
+              <Heading size={2} fit textColor="secondary" textFont="tertiary">
                 $ docker build
               </Heading>
+            </div>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <div>
               <Heading size={2} fit textColor="secondary" margin="80px 0 0 0" textFont="tertiary">
                 $ docker run
               </Heading>
