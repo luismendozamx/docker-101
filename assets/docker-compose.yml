@@ -5,7 +5,7 @@ services:
   node-docker:
     build: .
     image: node-docker
-    command: npm start
+    command: yarn start
     environment:
       NODE_ENV: development
     ports:

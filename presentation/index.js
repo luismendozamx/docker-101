@@ -34,6 +34,7 @@ const images = {
   logoInvestifyGray: require("../assets/logo-investify.png"),
   containers: require("../assets/containers.jpg"),
   dockerWay: require("../assets/docker_way.png"),
+  dockerCI: require("../assets/docker_ci.png"),
   vms: require("../assets/vms.png")
 };
 
@@ -49,52 +50,20 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={2} fit caps lineHeight={1} textColor="secondary">
-              Docker + Node.js
+              Docker 101
             </Heading>
             <Link href="https://twitter.com/luismendozamx">
               <Text bold caps textColor="tertiary">Luis Mendoza</Text>
             </Link>
-            <Link href="https://twitter.com/eventloopmx">
-              <Text textSize="1.5em" textColor="secondary" margin="50px 0px 0px" bold>@ Eventloop, noviembre 2016, CDMX</Text>
-            </Link>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="secondary" notes="You can even put notes on your slide. How awesome is that?">
-            <Appear fid="1">
-              <div>
-                <Heading size={2} caps fit textColor="primary" textFont="primary">
-                  @luismendozamx
-                </Heading>
-                <Text bold caps margin="20px 0 0 0" textColor="tertiary">GitHub | Twitter | Instagram </Text>
-              </div>
-            </Appear>
-            <Appear fid="2">
-              <Text bold italic margin="40px 0 0 0" textColor="primary">Full-stack developer</Text>
-            </Appear>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="secondary" notes="You can even put notes on your slide. How awesome is that?">
-            <Link href="http://mendoza.io/node-docker-talk">
-              <Text textSize="1.5em" textColor="primary" margin="50px 0px 0px" bold>Slides: mendoza.io/node-docker-talk</Text>
+            <Link href="http://mendoza.io/docker-101">
+              <Text textSize="1.5em" textColor="primary" margin="50px 0px 0px" bold>Slides: mendoza.io/docker-101</Text>
             </Link>
-            <Link href="https://github.com/luismendozamx/node-docker-demo">
-              <Text textSize="1.5em" textColor="primary" margin="50px 0px 0px" bold>Código: github.com/luismendozamx/node-docker-demo</Text>
+            <Link href="https://github.com/gbmcode/node-microservice-boilerplate">
+              <Text textSize="1.5em" textColor="primary" margin="50px 0px 0px" bold>Código: github.com/gbmcode/node-microservice-boilerplate</Text>
             </Link>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="white">
-            <Appear fid="1">
-              <Image src={images.logoGbm.replace("/", "")} margin="0 auto 40px auto" display="block" height="200px"/>
-            </Appear>
-            <Appear fid="2">
-              <Image src={images.logoInvestifyGray.replace("/", "")} margin="40px auto 0 auto" display="block" height="100px"/>
-            </Appear>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="secondary">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Docker + Node.js
-            </Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgImage={images.containers.replace("/", "")} bgDarken={0.75}>
@@ -136,9 +105,9 @@ export default class Presentation extends React.Component {
               <List>
                 <Appear><ListItem>ES6</ListItem></Appear>
                 <Appear><ListItem>Express</ListItem></Appear>
-                <Appear><ListItem>Mongoose</ListItem></Appear>
+                <Appear><ListItem>Joi</ListItem></Appear>
                 <Appear><ListItem>Gulp + Babel</ListItem></Appear>
-                <Appear><ListItem>Mocha + Chai</ListItem></Appear>
+                <Appear><ListItem>Jest</ListItem></Appear>
               </List>
             </div>
           </Slide>
@@ -160,14 +129,14 @@ export default class Presentation extends React.Component {
             lang="markup"
             code={require("raw!../assets/Dockerfile")}
             ranges={[
-              { loc: [0, 26] },
-              { loc: [0, 1] },
-              { loc: [2, 3] },
-              { loc: [4, 6] },
-              { loc: [7, 8] },
-              { loc: [9, 14] },
-              { loc: [15, 19] },
-              { loc: [20, 26] }
+              { loc: [0, 22] },
+              { loc: [0, 2] },
+              { loc: [3, 5] },
+              { loc: [6, 10] },
+              { loc: [11, 13] },
+              { loc: [14, 17] },
+              { loc: [18, 20] },
+              { loc: [21, 22] }
             ]}
           />
 
@@ -203,19 +172,19 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={2} fit textColor="secondary" textFont="tertiary">
+              $ docker-compose build
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={2} fit textColor="secondary" textFont="tertiary">
               $ docker-compose up
             </Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={2} fit textColor="secondary" textFont="tertiary">
-              $ docker-compose run node-docker npm run test
-            </Heading>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={2} fit caps lineHeight={1} textColor="secondary">
-              ¿Cómo diablos pongo esto en producción?
+              $ docker-compose run
             </Heading>
           </Slide>
 
@@ -225,38 +194,8 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={2} fit caps lineHeight={1} textColor="secondary">
-              CI/CD con Jenkins
-            </Heading>
-          </Slide>
-
-          <CodeSlide
-            transition={[]}
-            lang="markup"
-            code={require("raw!../assets/deploy.sh")}
-            ranges={[
-              { loc: [0, 13] },
-              { loc: [0, 1] },
-              { loc: [2, 10] },
-              { loc: [11, 13] }
-            ]}
-          />
-
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <div>
-              <Text bold caps margin="20px 0 0 0" textColor="primary">Opciones</Text>
-              <List>
-                <Appear><ListItem>DCOS / Apache Mesos</ListItem></Appear>
-                <Appear><ListItem>Kubernetes</ListItem></Appear>
-                <Appear><ListItem>Docker Swarm & cloud.docker.com</ListItem></Appear>
-                <Appear><ListItem>Otros</ListItem></Appear>
-              </List>
-            </div>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="primary">
-            <Image src={images.logoInvestifyWhite.replace("/", "")} margin="40px auto 0 auto" display="block" height="100px"/>
+          <Slide transition={["slide"]} bgColor="tertiary">
+            <Image src={images.dockerCI.replace("/", "")} margin="0 20px" display="block" height="400" />
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">

@@ -1,25 +1,22 @@
-FROM node:6.7
+# Set the base image
+FROM node:8.9-alpine
 
-RUN useradd --user-group --create-home --shell /bin/false app
-
-ENV HOME=/home/app
+# Set environment variables
 ENV NPM_CONFIG_LOGLEVEL=warn
 
-COPY npm-shrinkwrap.json $HOME/node-docker/
+# Create app dir and install dependencies
+RUN mkdir -p /app \
+    && apk update \
+    && apk add --no-cache git
 
-RUN chown -R app:app $HOME/*
+# Copy package.json & yarn.lock
+COPY package.json yarn.lock /app/node_api/
 
-USER app
-WORKDIR $HOME/node-docker
-RUN npm install
+# Run yarn install
+WORKDIR /app/node_api
+RUN yarn install
 
-USER root
-COPY . $HOME/node-docker
+# Copy files
+COPY . /app/node_api
 
-RUN chown -R app:app $HOME/*
-
-USER app
-
-EXPOSE 4040
-
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
